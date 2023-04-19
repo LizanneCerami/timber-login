@@ -1,6 +1,20 @@
 import { useState } from "react";
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDT_VCwdWehZUzD14WrBi48LZycuQxFv7k",
+  authDomain: "timber-login-lc.firebaseapp.com",
+  projectId: "timber-login-lc",
+  storageBucket: "timber-login-lc.appspot.com",
+  messagingSenderId: "992195627246",
+  appId: "1:992195627246:web:090e2b2a30dfe98de0cbff"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
 export default function SignupForm() {
     const [firstName, setFirstName] = useState();

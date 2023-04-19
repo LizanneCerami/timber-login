@@ -12,7 +12,8 @@ export default function SignUp() {
       <>
         <Container>
           <Row>
-            <Col>
+            <Col className="mx-4 p-4 rounded-3 login-container">
+              <h1>Sign Up</h1>
               <SignupForm />
             </Col>
           </Row>
